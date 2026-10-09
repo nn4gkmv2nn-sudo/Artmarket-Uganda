@@ -52,7 +52,7 @@ const initialArts=[
 {id:3,title:"Woven Earth",artist:"Nabirye Makes",price:65000,category:"Craft",emoji:"🧺",bg:"#e7c7a3",description:"A handmade decorative piece with natural textures.",phone:"256700000003"},
 {id:4,title:"Quiet Morning",artist:"Joel M.",price:120000,category:"Photography",emoji:"🌿",bg:"#d8e0cc",description:"A calm photographic study of light and nature.",phone:"256700000004"}
 ];
-let arts=[...initialArts];let selectedPhone="";
+let arts=JSON.parse(localStorage.getItem(“artmarketArts”)||“null”)||[…initialArts];let selectedPhone=””;
 const grid=document.getElementById("grid"),search=document.getElementById("search"),category=document.getElementById("category"),sort=document.getElementById("sort");
 const fmt=n=>"UGX "+Number(n).toLocaleString("en-UG");
 function safe(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
