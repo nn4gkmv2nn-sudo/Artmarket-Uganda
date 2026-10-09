@@ -76,5 +76,9 @@ document.getElementById("listingForm").addEventListener("submit",e=>{
 });
 search.addEventListener("input",render);category.addEventListener("change",render);sort.addEventListener("change",render);render();
 </script>
-</body>
+</body><script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js");
+}
+</script>
 </html>
