@@ -1,0 +1,19 @@
+
+{
+  "name": "ArtMarket Uganda",
+  "short_name": "ArtMarket",
+  "description": "Discover and sell artwork by Ugandan artists.",
+  "start_url": "/Artmarket-Uganda/",
+  "scope": "/Artmarket-Uganda/",
+  "display": "standalone",
+  "background_color": "#f8f6f1",
+  "theme_color": "#163b32",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
