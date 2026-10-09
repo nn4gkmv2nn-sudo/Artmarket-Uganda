@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#163b32">
+<title>ArtMarket Uganda — Discover local art</title>
+<style>
+:root{--ink:#18241f;--muted:#68746e;--green:#163b32;--lime:#d7f36a;--cream:#f7f5ee;--card:#fffdf8;--line:#e5e5db;--orange:#f3a46f}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.top{background:var(--green);color:white;padding:14px 5vw;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:850;letter-spacing:-.7px;font-size:1.25rem}.brand span{color:var(--lime)}.top small{color:#d1ddd5}.hero{padding:60px 5vw 46px;background:var(--green);color:white;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:310px;height:310px;border:1px solid #ffffff30;border-radius:50%;right:6%;top:-90px;box-shadow:0 0 0 35px #ffffff08,0 0 0 75px #ffffff08}.eyebrow{color:var(--lime);text-transform:uppercase;letter-spacing:2px;font-size:.76rem;font-weight:800}.hero h1{font-size:clamp(2.5rem,7vw,5rem);letter-spacing:-3px;line-height:.98;max-width:730px;margin:16px 0}.hero p{color:#d6e0d9;max-width:530px;line-height:1.65}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{border:0;border-radius:999px;padding:12px 19px;font-weight:750;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}.primary{background:var(--lime);color:var(--green)}.secondary{background:transparent;color:white;border:1px solid #ffffff70}.wrap{padding:36px 5vw 70px;max-width:1500px;margin:auto}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}.section-head h2{font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:-1px;margin:0 0 6px}.section-head p{margin:0;color:var(--muted)}.tools{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 22px}.tools input,.tools select,.form input,.form select,.form textarea{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--ink);min-width:0}.tools input{flex:1;min-width:200px}.tools select{min-width:145px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.art-card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .2s,box-shadow .2s}.art-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #1b31200d}.art-image{height:220px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#ece9dd}.art-image img{width:100%;height:100%;object-fit:cover}.art-emoji{font-size:5rem;filter:drop-shadow(0 8px 6px #0002)}.art-info{padding:15px}.category{font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;font-weight:800;color:#64776c}.art-info h3{margin:7px 0;font-size:1.1rem}.artist{font-size:.86rem;color:var(--muted)}.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:15px}.price{font-weight:850}.contact{background:var(--green);color:white;border:0;border-radius:999px;padding:9px 12px;font-size:.8rem;font-weight:750}.empty{display:none;border:1px dashed #b7c2b9;padding:28px;border-radius:16px;color:var(--muted);text-align:center}.sell-panel{margin-top:58px;background:#e8eddc;border-radius:24px;padding:clamp(22px,4vw,42px);display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:start}.sell-panel h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.05;letter-spacing:-1px;margin:10px 0}.sell-panel p{color:#52645a;line-height:1.6}.form{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form label{font-size:.82rem;font-weight:750;display:flex;flex-direction:column;gap:7px}.form .wide{grid-column:1/-1}.form input,.form select,.form textarea{width:100%}.form textarea{min-height:85px;resize:vertical}.form button{grid-column:1/-1;justify-self:start}.hint{font-size:.78rem;color:#637067;margin-top:10px}.how{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}.step{border-top:1px solid var(--line);padding:18px 4px}.step b{display:block;margin-bottom:7px}.step p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.55}footer{background:#122d26;color:#d9e4dc;padding:26px 5vw;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.85rem}.notice{padding:13px 15px;border-radius:12px;background:#fff6d9;border:1px solid #e8d99d;color:#63532a;font-size:.86rem;margin-top:18px}.modal{display:none;position:fixed;inset:0;background:#0b1712a8;z-index:10;align-items:center;justify-content:center;padding:18px}.modal-box{background:var(--card);border-radius:20px;max-width:430px;width:100%;padding:24px}.modal-box h3{margin-top:0}.modal-box input{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;margin:8px 0 14px}.modal-actions{display:flex;gap:10px;flex-wrap:wrap}.modal-actions .primary{border:0}.modal-actions .secondary-dark{border:1px solid var(--line);background:white;color:var(--ink)}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#122d26;color:white;padding:12px 18px;border-radius:999px;display:none;z-index:20;max-width:90%;text-align:center}
+@media(max-width:1050px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.art-image{height:230px}}
+@media(max-width:650px){.top{padding:13px 5vw}.top small{display:none}.hero{padding-top:44px}.hero h1{letter-spacing:-1.8px}.grid{gap:11px}.art-image{height:155px}.art-info{padding:11px}.art-info h3{font-size:.98rem}.card-bottom{align-items:flex-start;flex-direction:column}.contact{width:100%}.sell-panel{grid-template-columns:1fr}.form{grid-template-columns:1fr}.form .wide,.form button{grid-column:auto}.how{grid-template-columns:1fr}.wrap{padding-top:28px}.section-head{align-items:start}}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand">ArtMarket<span>.</span></div><small>A home for Uganda’s independent artists</small><a href="#sell" class="btn primary">Sell your art ↗</a></header>
+<section class="hero">
+  <div class="eyebrow">Made by artists. Found by everyone.</div>
+  <h1>Good art deserves<br>a bigger audience.</h1>
+  <p>Discover original paintings, illustrations, crafts and handmade pieces from independent creatives. Find a piece you love and connect directly with its artist.</p>
+  <div class="hero-actions"><a class="btn primary" href="#gallery">Explore the gallery ↓</a><a class="btn secondary" href="#sell">I’m an artist</a></div>
+</section>
+<main class="wrap">
+  <section id="gallery">
+    <div class="section-head"><div><h2>Fresh from the gallery</h2><p>Explore the work. Meet the artist. Make it yours.</p></div><span class="category" id="count">4 pieces</span></div>
+    <div class="tools"><input id="search" type="search" placeholder="Search artwork or artist…" aria-label="Search artwork or artist"><select id="category" aria-label="Filter by category"><option value="all">All categories</option><option>Painting</option><option>Digital art</option><option>Craft</option><option>Photography</option></select><select id="sort" aria-label="Sort artwork"><option value="newest">Newest first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div>
+    <div class="grid" id="grid"></div><div class="empty" id="empty">No artwork matches that search yet. Try another name or category.</div>
+  </section>
+  <section class="sell-panel" id="sell">
+    <div><div class="eyebrow" style="color:#37634d">For artists & makers</div><h2>Your work belongs in the spotlight.</h2><p>Show people what you make. Add a title, price and contact number so interested buyers can reach you.</p><div class="notice"><strong>Prototype note:</strong> this first version saves new listings only in this browser. They are not yet visible to other people online. A shared live marketplace will need hosting and a database.</div></div>
+    <form class="form" id="listingForm">
+      <label>Artwork title<input name="title" required maxlength="70" placeholder="e.g. Sunset over Kampala"></label>
+      <label>Your artist name<input name="artist" required maxlength="60" placeholder="Name or studio"></label>
+      <label>Price (UGX)<input name="price" required type="number" min="0" step="1000" placeholder="150000"></label>
+      <label>Category<select name="category" required><option value="">Choose one</option><option>Painting</option><option>Digital art</option><option>Craft</option><option>Photography</option></select></label>
+      <label>WhatsApp number<input name="phone" required type="tel" placeholder="e.g. 2567XXXXXXXX"></label>
+      <label>Artwork photo<input name="photo" type="file" accept="image/*"></label>
+      <label class="wide">Short description<textarea name="description" maxlength="250" placeholder="Tell buyers a little about this piece…"></textarea></label>
+      <button class="btn primary" type="submit">Add my artwork +</button>
+    </form>
+  </section>
+  <section class="how"><div class="step"><b>01 — Discover</b><p>Browse different kinds of art and search by title or artist.</p></div><div class="step"><b>02 — Connect</b><p>Contact an artist directly to ask questions and discuss a purchase.</p></div><div class="step"><b>03 — Create</b><p>Artists can add a sample listing to test the marketplace experience.</p></div></section>
+</main>
+<footer><div><strong>ArtMarket Uganda</strong><br>Helping local creativity find its people.</div><div>First prototype · Built to grow</div></footer>
+<div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-box"><h3 id="modalTitle">Contact the artist</h3><p id="contactCopy">Message this artist about the piece.</p><label for="buyerPhone">Artist’s WhatsApp number</label><input id="buyerPhone" placeholder="2567XXXXXXXX" inputmode="tel"><div class="modal-actions"><button class="btn primary" id="openWhatsApp">Open WhatsApp ↗</button><button class="btn secondary-dark" id="closeModal">Cancel</button></div><p class="hint">Confirm the price, delivery method and payment details directly with the artist before paying.</p></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const initialArts=[
+{id:1,title:"Warmth of the Hills",artist:"Amina K.",price:180000,category:"Painting",emoji:"🌄",bg:"#ead6bc",description:"An expressive landscape study inspired by the Ugandan countryside.",phone:"256700000001"},
+{id:2,title:"City Dreams",artist:"Kato Studio",price:95000,category:"Digital art",emoji:"🌆",bg:"#d4e4d8",description:"A bold digital artwork celebrating city life and possibility.",phone:"256700000002"},
+{id:3,title:"Woven Earth",artist:"Nabirye Makes",price:65000,category:"Craft",emoji:"🧺",bg:"#e7c7a3",description:"A handmade decorative piece with natural textures.",phone:"256700000003"},
+{id:4,title:"Quiet Morning",artist:"Joel M.",price:120000,category:"Photography",emoji:"🌿",bg:"#d8e0cc",description:"A calm photographic study of light and nature.",phone:"256700000004"}
+];
+let arts=[...initialArts];let selectedPhone="";
+const grid=document.getElementById("grid"),search=document.getElementById("search"),category=document.getElementById("category"),sort=document.getElementById("sort");
+const fmt=n=>"UGX "+Number(n).toLocaleString("en-UG");
+function safe(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function render(){
+ let list=arts.filter(a=>(category.value==="all"||a.category===category.value)&&(`${a.title} ${a.artist} ${a.description||""}`).toLowerCase().includes(search.value.toLowerCase().trim()));
+ if(sort.value==="low")list.sort((a,b)=>a.price-b.price);if(sort.value==="high")list.sort((a,b)=>b.price-a.price);if(sort.value==="newest")list.sort((a,b)=>b.id-a.id);
+ document.getElementById("count").textContent=`${list.length} ${list.length===1?"piece":"pieces"}`;
+ grid.innerHTML=list.map(a=>`<article class="art-card"><div class="art-image" style="background:${a.bg||"#ece9dd"}">${a.photo?`<img src="${a.photo}" alt="${safe(a.title)}">`:`<span class="art-emoji" aria-hidden="true">${a.emoji||"🎨"}</span>`}</div><div class="art-info"><div class="category">${safe(a.category)}</div><h3>${safe(a.title)}</h3><div class="artist">By ${safe(a.artist)}</div>${a.description?`<p class="artist">${safe(a.description)}</p>`:""}<div class="card-bottom"><span class="price">${fmt(a.price)}</span><button class="contact" data-id="${a.id}">Contact artist ↗</button></div></div></article>`).join("");
+ document.getElementById("empty").style.display=list.length?"none":"block";
+ grid.querySelectorAll(".contact").forEach(b=>b.addEventListener("click",()=>contact(Number(b.dataset.id))));
+}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.style.display="block";setTimeout(()=>t.style.display="none",3000)}
+function contact(id){const a=arts.find(x=>x.id===id);if(!a)return;selectedPhone=a.phone||"";document.getElementById("contactCopy").textContent=`Ask ${a.artist} about “${a.title}” (${fmt(a.price)}).`;document.getElementById("buyerPhone").value=selectedPhone;document.getElementById("contactModal").style.display="flex"}
+document.getElementById("closeModal").onclick=()=>document.getElementById("contactModal").style.display="none";
+document.getElementById("contactModal").addEventListener("click",e=>{if(e.target.id==="contactModal")e.currentTarget.style.display="none"});
+document.getElementById("openWhatsApp").onclick=()=>{let phone=document.getElementById("buyerPhone").value.replace(/\D/g,"").replace(/^0/,"256");if(phone.length<9){toast("Enter a valid WhatsApp number first.");return}const a=arts.find(x=>x.phone===selectedPhone)||arts[0];const msg=encodeURIComponent(`Hello! I'm interested in "${a.title}" listed on ArtMarket for ${fmt(a.price)}. Is it available?`);window.open(`https://wa.me/${phone}?text=${msg}`,"_blank","noopener");document.getElementById("contactModal").style.display="none"};
+document.getElementById("listingForm").addEventListener("submit",e=>{
+ e.preventDefault();const f=e.currentTarget,fd=new FormData(f),file=f.elements.photo.files[0];
+ const add=photo=>{const phone=String(fd.get("phone")).replace(/\D/g,"").replace(/^0/,"256");arts.push({id:Date.now(),title:fd.get("title").trim(),artist:fd.get("artist").trim(),price:Number(fd.get("price")),category:fd.get("category"),phone,description:fd.get("description").trim(),photo:photo||"",emoji:"🎨",bg:"#e6e4d9"});render();f.reset();toast("Artwork added to this browser’s gallery.");document.getElementById("gallery").scrollIntoView({behavior:"smooth"})};
+ if(file){if(file.size>3*1024*1024){toast("Please choose an image smaller than 3 MB.");return}const reader=new FileReader();reader.onload=()=>add(reader.result);reader.readAsDataURL(file)}else add("");
+});
+search.addEventListener("input",render);category.addEventListener("change",render);sort.addEventListener("change",render);render();
+</script>
+</body>
+</html>
